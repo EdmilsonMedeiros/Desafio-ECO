@@ -110,7 +110,8 @@
                         <li><b>Forma de pagamento:</b> {{ isset($contribuicao->pagamento->descricao) ? $contribuicao->pagamento->descricao : '' }}</li>
                         <hr>
                         <li><b>Observações:</b> <br> {{ isset($contribuicao->observacao) ? $contribuicao->observacao : '' }}</li>
-
+                        <hr>
+                        <li><b>Endereço:</b> {{ isset($contribuicao->contribuinte->endereco) ? $contribuicao->contribuinte->endereco->rua : '' }}, {{ isset($contribuicao->contribuinte->endereco) ? $contribuicao->contribuinte->endereco->numero : '' }}, {{ isset($contribuicao->contribuinte->endereco) ? $contribuicao->contribuinte->endereco->bairro : '' }}, {{ isset($contribuicao->contribuinte->endereco) ? $contribuicao->contribuinte->endereco->cidade : '' }}, {{ isset($contribuicao->contribuinte->endereco) ? $contribuicao->contribuinte->endereco->estado : '' }}</li>
 
                     </ul>
                 </div>

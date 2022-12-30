@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -12,7 +13,7 @@
         <li class="nav-item"><a class="nav-link" href="{{ route('movimentos.historico', Auth::user()->id) }}" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Manutenções nos próximos 7 dias"><img src="{{ asset('img/historia.png') }}" alt=""> Meu histórico de movimentos</a></li>
     </ul>
 
-    @if ($contribuicoes->first()->data_finalizacao != null)
+    @if (isset($contribuicoes->first()->data_finalizacao) && !is_null($contribuicoes->first()->data_finalizacao))
         <p class="text-success error">{{ 'Finalizados' }}</p>
     @endif
 

@@ -20,7 +20,7 @@
 
         <p>Valor..................: {{ isset($contribuicao->valor) ? $contribuicao->valor : '' }}</p>
 
-        <p>Data...................: {{ isset($contribuicao->data_recebimento) ? $contribuicao->data_recebimento : '' }}</p>
+        <p>Data recebimento.......: {{ isset($contribuicao->data_recebimento) ? date('d/m/Y', strtotime($contribuicao->data_recebimento)) : '' }}</p>
 
         <p>ID/Mensageiro..........: {{ isset($contribuicao->mensageiro->id) ? $contribuicao->mensageiro->id : '' }} -
             {{ isset($contribuicao->mensageiro->name) ? $contribuicao->mensageiro->name : '' }}</p>
